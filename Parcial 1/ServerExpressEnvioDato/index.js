@@ -16,6 +16,8 @@ app.use(morgan('tiny'));
 app.use(express.json());
 //middleware para usar el texto del cuerpo de la peticion
 app.use(express.text());
+// middleware para accesar al formulario (form-encode)
+app.use(express.urlencoded({ extended : false }));
 
 // parametros de consulta
 app.get('/alumnos', (req, res, next) => {
@@ -35,6 +37,11 @@ app.get('/administrativos', (req, res, next) => {
     for (const campo in req.body) {
         console.log(req.body[campo]);
     }
+    res.send('Contestando a get desde Server Express')
+})
+// recibir formulario
+app.get('/prefectos', (req, res, next) => {
+    console.log(req.body);
     res.send('Contestando a get desde Server Express')
 })
 
