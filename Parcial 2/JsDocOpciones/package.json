@@ -1,0 +1,16 @@
+{
+  "name": "random-ternurin",
+  "version": "1.0.0",
+  "description": "Módulo para obtener el nombre de un ternurin aleatoriamente",
+  "main": "./src/modulo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "doc": "jsdoc -c jsdoc.json --readme README.md"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "docdash": "^2.0.2"
+  }
+}
