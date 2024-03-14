@@ -1,0 +1,12 @@
+{
+  "name": "random-ternurin",
+  "version": "1.0.0",
+  "description": "Módulo para obtener el nombre de un ternurin aleatoriamente",
+  "main": "modulo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
