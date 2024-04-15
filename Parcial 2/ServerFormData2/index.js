@@ -15,10 +15,10 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 app.post('/upload', upload.single('file'), (req, res) => {
-    res.json({ message: 'File uploaded successfully!' });
+    res.json({ message: 'Archivo subido correctamente!' });
   });
 
 app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+  console.log('Servidor escuchando en el puerto 3000');
 });
 ``
