@@ -4,10 +4,14 @@
   "description": "Módulo para obtener el nombre de un ternurin aleatoriamente",
   "main": "modulo.js",
   "scripts": {
-    "test": "node --test ./test"
+    "test": "mocha"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "chai": "^5.1.0",
+    "mocha": "^10.4.0"
+  }
 }
