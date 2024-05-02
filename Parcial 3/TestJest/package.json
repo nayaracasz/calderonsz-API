@@ -1,0 +1,15 @@
+{
+  "name": "random-ternurin",
+  "version": "1.0.0",
+  "description": "Módulo para obtener el nombre de un ternurin aleatoriamente",
+  "main": "modulo.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
