@@ -1,4 +1,4 @@
-import * as ternurin from '../src/modulo.js';
+const ternurin = require('../src/modulo.js');
 
 ternurin.randomTernurin = jest.fn( () => { return 'Avril Husky' } )
 

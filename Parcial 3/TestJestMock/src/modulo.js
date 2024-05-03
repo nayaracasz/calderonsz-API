@@ -1,4 +1,4 @@
-export var ternurines = ['Freya Chocolate', 
+var ternurines = ['Freya Chocolate', 
                 'Sharon Fennec', 
                 'Kippie Waddle', 
                 'Ginger Snowdrift', 
@@ -13,7 +13,12 @@ export var ternurines = ['Freya Chocolate',
  * Función que retorna un ternurin en la lista. (funcion no determinista)
  */
 
-export function randomTernurin() {
+function randomTernurin() {
     let random = Math.floor(Math.random() * ternurines.length);
     return ternurines[random];
 }
+
+module.exports = {
+    ternurines: ternurines,
+    randomTernurin: randomTernurin
+};
