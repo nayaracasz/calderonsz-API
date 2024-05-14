@@ -2,9 +2,15 @@ const express = require('express');
 const app = express();
 const swaggerUI = require('swagger-ui-express');
 const swaggerJsDoc = require('swagger-jsdoc');
+const { SwaggerTheme, SwaggerThemeNameEnum } = require('swagger-themes');
 const path = require('path');
 
-const ternurinesRouter = require('./routes/ternurines.js')
+const ternurinesRouter = require('./routes/ternurines.js');
+const theme = new SwaggerTheme();
+const options = {
+    explorer: true,
+    customCss: theme.getBuffer(SwaggerThemeNameEnum.DARK)
+  };
 
 app.use(express.json());
 
@@ -29,5 +35,9 @@ const swaggerOptions = {
 };
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
-app.use("/api-docs",swaggerUI.serve,swaggerUI.setup(swaggerDocs));
+app.use("/api-docs",swaggerUI.serve,swaggerUI.setup(swaggerDocs,options));
+
+app.get('/api-docs-json', (req, res) => {
+    res.json(swaggerDocs);
+})
    
