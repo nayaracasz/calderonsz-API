@@ -15,16 +15,6 @@ const pool = mysql.createPool({
     keepAliveInitialDelay: 0,
   });
 
-/**
- * @swagger
- * /characters:
- *   get:
- *     description: Welcome to swagger-jsdoc!
- *     responses:
- *       200:
- *         description: Returns a mysterious string.
- */
-
 router.get('/characters/:CharacterID?', (req, res, next) => {
     try{
         const characterID = req.params.CharacterID;

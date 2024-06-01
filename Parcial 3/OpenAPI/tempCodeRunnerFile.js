@@ -1,1 +1,1 @@
-import * as express from 'express';
+const readmeFile = fs.readFileSync(path.join(__dirname, 'readme.md'), )
